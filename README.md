@@ -20,7 +20,17 @@ After editing the keymap.c file:
 ```
 make 40percentclub/gherkin:feralpacket
 ```
+The first time the controller is flashed, the pins GND and RST need to be shorted on the controller.  QMK Toolbox will not even see the keyboard until it has been reset.  The keyboard can then be flashed.
 
+```
+*** Caterina device connected (usbser): Microsoft USB Serial Device (COM4) (2341:0036:0001) [COM4]
+*** Attempting to flash, please don't remove device
+>>> avrdude.exe -p atmega32u4 -c avr109 -U flash:w:"C:\Users\feralpacket\qmk_firmware\40percentclub_gherkin_feralpacket.hex":i -P COM4
+    
+```
+To reset the keyboard after the controller has the firmware installed, hold the LT(5) key and hit the key configured for RESET.
+
+The keymap:
 ```
 #define FN1_SPC     LT(1, KC_SPC)
 #define FN2_BSPC    LT(2, KC_BSPC)
