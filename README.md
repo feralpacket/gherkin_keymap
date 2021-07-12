@@ -7,7 +7,7 @@ https://www.40percent.club/2016/11/gherkin.html
  - Added KC_ENT to layer 2
 
 
-In QMK MSYSL
+In QMK MSYS:
 ```
 $ qmk setup
 y
