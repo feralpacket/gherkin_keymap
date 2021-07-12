@@ -5,7 +5,7 @@ Gherkin keyboard keymap
 https://www.40percent.club/2016/11/gherkin.html
 
 
-
+```
 #define FN1_SPC     LT(1, KC_SPC)
 #define FN2_BSPC    LT(2, KC_BSPC)
 #define FN3_C       LT(3, KC_C)
@@ -112,4 +112,4 @@ https://www.40percent.club/2016/11/gherkin.html
     _______, _______, _______, _______, _______, _______, _______, _______, BL_DEC,  BL_INC,
     _______, _______, _______, _______, RESET,   _______, _______, _______, _______, _______
   )
-3
+```
