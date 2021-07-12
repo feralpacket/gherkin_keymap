@@ -26,7 +26,43 @@ The first time the controller is flashed, the pins GND and RST need to be shorte
 *** Caterina device connected (usbser): Microsoft USB Serial Device (COM4) (2341:0036:0001) [COM4]
 *** Attempting to flash, please don't remove device
 >>> avrdude.exe -p atmega32u4 -c avr109 -U flash:w:"C:\Users\feralpacket\qmk_firmware\40percentclub_gherkin_feralpacket.hex":i -P COM4
+
+    Connecting to programmer: .
+    Found programmer: Id = "CATERIN"; type = S
+        Software Version = 1.0; No Hardware Version given.
+    Programmer supports auto addr increment.
+    Programmer supports buffered memory access with buffersize=128 bytes.
     
+    Programmer supports the following devices:
+        Device code: 0x44
+    
+    avrdude.exe: AVR device initialized and ready to accept instructions
+    
+    Reading | ################################################## | 100% 0.00s
+    
+    avrdude.exe: Device signature = 0x1e9587 (probably m32u4)
+    avrdude.exe: NOTE: "flash" memory has been specified, an erase cycle will be performed
+                 To disable this feature, specify the -D option.
+    avrdude.exe: erasing chip
+    avrdude.exe: reading input file "C:\Users\feralpacket\qmk_firmware\40percentclub_gherkin_feralpacket.hex"
+    avrdude.exe: writing flash (18020 bytes):
+    
+    Writing | ################################################## | 100% 1.38s
+    
+    avrdude.exe: 18020 bytes of flash written
+    avrdude.exe: verifying flash memory against C:\Users\feralpacket\qmk_firmware\40percentclub_gherkin_feralpacket.hex:
+    avrdude.exe: load data flash data from input file C:\Users\feralpacket\qmk_firmware\40percentclub_gherkin_feralpacket.hex:
+    avrdude.exe: input file C:\Users\feralpacket\qmk_firmware\40percentclub_gherkin_feralpacket.hex contains 18020 bytes
+    avrdude.exe: reading on-chip flash data:
+    
+    Reading | ################################################## | 100% 0.15s
+    
+    avrdude.exe: verifying ...
+    avrdude.exe: 18020 bytes of flash verified
+    
+    avrdude.exe done.  Thank you.
+    
+*** Caterina device disconnected (usbser): Microsoft USB Serial Device (COM4) (2341:0036:0001)
 ```
 To reset the keyboard after the controller has the firmware installed, hold the LT(5) key and hit the key configured for RESET.
 
