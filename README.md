@@ -1,9 +1,25 @@
 # gherkin
 Gherkin keyboard keymap
 
-
 https://www.40percent.club/2016/11/gherkin.html
 
+ - Added KC_DOT, KC_SLSH, and KC_ENT to layer 1
+ - Added KC_ENT to layer 2
+
+
+In QMK MSYSL
+```
+$ qmk setup
+y
+
+$ qmk new-keymap
+Keyboard Name: 40percentclub/gherkin
+Keymap Name: feralpacket
+```
+After editing the keymap.c file:
+```
+make 40percentclub/gherkin:feralpacket
+```
 
 ```
 #define FN1_SPC     LT(1, KC_SPC)
@@ -39,14 +55,14 @@ https://www.40percent.club/2016/11/gherkin.html
  * |-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
  * |   F1  |   F2  |   F3  |   F4  |   F5  |   F6  |   F7  |   F8  |   F9  |  F10  |
  * |-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
- * |       |       |       |       |  DEL  |       |       |       |       |       |
+ * |       |       |       |       |  DEL  |       |       |   .   |   /   | Enter |
  * `-------------------------------------------------------------------------------'
  */
 
   [1] = LAYOUT_ortho_3x10(
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
     KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
-    _______, _______, _______, _______, KC_DEL,  _______, _______, _______, _______, _______
+    _______, _______, _______, _______, KC_DEL,  _______, _______, KC_SLSH, KC_DOT , KC_ENT
   ),
 
 /* Layer 2
@@ -55,14 +71,14 @@ https://www.40percent.club/2016/11/gherkin.html
  * |-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
  * |  F11  |  F12  |       |       |       |       |       |       |       |   `   |
  * |-------+-------+-------+-------+-------+-------+-------+-------+-------+-------|
- * |       |       |       |       |       |       |       |       |       |       |
+ * |       |       |       |       |       |       |       |       |       | Enter |
  * `-------------------------------------------------------------------------------'
  */
 
   [2] = LAYOUT_ortho_3x10(
     KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
     KC_F11,  KC_F12,  _______, _______, _______, _______, _______, _______, _______, KC_GRV,
-    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_ENT
   ),
 
 /* Layer 3
